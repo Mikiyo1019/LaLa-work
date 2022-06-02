@@ -8,10 +8,11 @@ public class PoisonMatango extends Matango {
 		this.poisoncount = 10;
 	}
 	
-	public void attack (Hero h) {
+	public void attack (Hero h) {//オーバーライドしてる(親のメソッドを上書き)
+		System.out.println("PisonMatnagoの攻撃");
 		super.attack(h);
-		if (this.poisoncount > 0) {
-			System.out.println("更に毒の胞子をばらまいた!");
+		if (this.poisoncount > 0) {//ここで宣言したpcountを呼び出す
+			System.out.println(this.suffix + "は更に毒の胞子をばらまいた!");
 			int dmg = h.hp / 5;
 			h.hp -= dmg;
 			System.out.println(h.name + "に" + dmg + "ポイントのダメージ");
