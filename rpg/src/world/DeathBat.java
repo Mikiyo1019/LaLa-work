@@ -2,9 +2,9 @@ package world;
 
 public class DeathBat extends FlyingMonster{
 	
-	public DeathBat (int hpnum) {//コンストラクタでhpの初期値を決める
+	public DeathBat () {//コンストラクタでhpの初期値を決める
 		//super(hp);
-		this.hp = hpnum;
+		//this.hp = hpnum;
 	}
 	
 	public void attack() {

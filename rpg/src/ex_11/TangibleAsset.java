@@ -8,7 +8,7 @@ public abstract class TangibleAsset extends Asset implements Thing {
 	public TangibleAsset (String name, int price, String color) {
 		super(name, price);
 		this.color = color;
-		this.weight = weight;//後からメソッドで入れてもok
+		//this.weight = weight;//後からメソッドで入れてもok
 	}
 	
 	//メソッド
