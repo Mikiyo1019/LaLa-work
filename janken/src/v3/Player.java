@@ -4,7 +4,7 @@ public abstract class Player {
 	private String name;
 	private int hand;
 	private String result;
-	String[] hands = {"グー", "チョキ", "パー"};
+	private String[] hands = {"グー", "チョキ", "パー"};
 	
 	//次の手を決める戦略の型（インタフェース）= 多態性
 	private NextHand nextHand;//(インタフェースの型指定)今は抽象クラスだから決めない。次のクラスで決める
@@ -28,7 +28,7 @@ public abstract class Player {
 	}
 	//外部から手を決められないように
 	public void setHand() {
-		this.hand = nextHand.decideHand();
+		this.hand = this.nextHand.decideHand();//フィールドのnextHand
 	}
 
 	public String getResult() {
